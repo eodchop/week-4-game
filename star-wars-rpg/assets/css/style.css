@@ -4,6 +4,12 @@ body {
 
 }
 
+.img-thumbnail {
+    border:3px;
+    border-style: solid;
+    border-color: darkred;
+}
+
 /*
 !*#obiwon-image {
 	height: 64px;
