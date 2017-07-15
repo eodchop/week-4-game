@@ -17,14 +17,10 @@ $(function () {
                 console.log($("#character-row"));
                 movePlayerCharacter(this);
                 moveEnemies();
-
-
             }else {
                 moveDefender(this);
-
             }
         })
-
 })
 
 function movePlayerCharacter(playerDiv){
@@ -48,4 +44,18 @@ function moveDefender(defenderDiv){
     $("#defender").append(defenderDiv);
     hasPickedDefender = true;
     selectedDefenderId = defenderDiv.id;
+}
+
+function setHealth(){
+    obiwon: 100;
+    luke: 100;
+    darth: 100;
+    quagmire: 80;
+    setPoints.append($("#"))
+
+}
+
+function setHitPoints(){
+
+
 }
