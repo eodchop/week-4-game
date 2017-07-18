@@ -8,7 +8,7 @@ var hasPickedCharacter = false;
 var hasPickedDefender = false;
 var selectedDefenderId = "";
 var backgroundMusic = new Audio("assets/audio/music.mp3")
-var giggty = new Audio("assets/audio/giggity.mp3")
+var giggity = new Audio("assets/audio/giggity.mp3")
 var characters = {
         charactersArray: [],
         createCharacter: function(nm, hlth, att,countatt, imgURL) {
@@ -111,8 +111,8 @@ $(function () {
     });
     $("#Quagmire").on("click", function(){
         backgroundMusic.pause();
-        quagmire.play();
-        quagmire.on("ended", function () {
+        giggity.play();
+        giggity.on("ended", function() {
             backgroundMusic.play();
         })
     });
