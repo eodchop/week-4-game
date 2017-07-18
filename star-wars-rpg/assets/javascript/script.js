@@ -147,9 +147,15 @@ function moveDefender(defenderDiv) {
 }
 
 
-//selectCharacterId
-//selectedDefenderId
-//setCharacterByObject
+
+//get variables we are going to be using(getcharacterobject by name)//
+//health, attack, baseAttack,counterAttack//
+//selectedCharacter hits selectedDefender//
+//decrement selected defenders health by selected characters attack
+//set selected characters attack=attack + baseattack
+//selected Defender decrements selectedCharacter health equal to counterattack
+//if selected defender health <= 0 select new defender
+//if selected character health <= 0 call gameover
 function fight(){
    var character = characters.getCharacterObjectByName(selectedCharacterId);
    var defender = characters.getCharacterObjectByName(selectedDefenderId);
@@ -176,12 +182,5 @@ function fight(){
     }
 
 }
-//get variables we are going to be using(getcharacterobject by name)//
-//health, attack, baseAttack,counterAttack//
-//selectedCharacter hits selectedDefender//
-//decrement selected defenders health by selected characters attack
-//set selected characters attack=attack + baseattack
-//selected Defender decrements selectedCharacter health equal to counterattack
-//if selected defender health <= 0 select new defender
-//if selected character health <= 0 call gameover
+
 
