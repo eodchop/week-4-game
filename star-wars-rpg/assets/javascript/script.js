@@ -94,7 +94,8 @@ $(function () {
     /* On character clicked (onclick event will be needed)
      Move character to different div section*/
     backgroundMusic.play();
-    characters.init()
+    characters.init();
+    console.log(giggity);
     $(".character").on("click", function () {
         console.log($("#character-row").children()[0]);
 
@@ -112,7 +113,7 @@ $(function () {
     $("#Quagmire").on("click", function(){
         backgroundMusic.pause();
         giggity.play();
-        giggity.on("ended", function() {
+        $(giggity).on('ended', function() {
             backgroundMusic.play();
         })
     });
