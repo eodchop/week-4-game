@@ -7,6 +7,8 @@ var selectedCharacterId = "";
 var hasPickedCharacter = false;
 var hasPickedDefender = false;
 var selectedDefenderId = "";
+var backgroundMusic = new Audio("assets/audio/music.mp3")
+var giggty = new Audio("assets/audio/giggity.mp3")
 var characters = {
         charactersArray: [],
         createCharacter: function(nm, hlth, att,countatt, imgURL) {
@@ -91,6 +93,7 @@ var characters = {
 $(function () {
     /* On character clicked (onclick event will be needed)
      Move character to different div section*/
+    backgroundMusic.play();
     characters.init()
     $(".character").on("click", function () {
         console.log($("#character-row").children()[0]);
@@ -105,6 +108,13 @@ $(function () {
                 moveDefender(this);
             }
         }
+    });
+    $("#Quagmire").on("click", function(){
+        backgroundMusic.pause();
+        quagmire.play();
+        quagmire.on("ended", function () {
+            backgroundMusic.play();
+        })
     });
     $("#fight").on('click', function(){
         fight();
